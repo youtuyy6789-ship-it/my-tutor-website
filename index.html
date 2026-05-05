@@ -2,75 +2,297 @@
 <html lang="th">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="เรียนพิเศษตัวต่อตัวระดับมัธยมต้น ม.1–3 ทุกวิชา ติวสอบเข้า ม.4"/>
-<meta name="keywords" content="เรียนพิเศษมัธยมต้น,ติวเตอร์ม.1ม.2ม.3,ติวสอบเข้าม.4"/>
-<title>เรียนพิเศษระดับมัธยมต้น | TutorProTH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="TutorProTH รับสอนพิเศษตัวต่อตัว โดยติวเตอร์คุณภาพจากสถาบันชั้นนำ ทุกวิชา ทุกระดับชั้น เรียนที่บ้าน นอกสถานที่ และออนไลน์"/>
+<meta name="keywords" content="ติวเตอร์ตัวต่อตัว,สอนพิเศษที่บ้าน,เรียนพิเศษออนไลน์,ติวเตอร์คุณภาพ,สอนพิเศษตัวต่อตัว"/>
+<title>TutorProTH | ติวเตอร์ตัวต่อตัวคุณภาพ เรียนที่บ้าน ออนไลน์ นอกสถานที่</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-:root{--navy:#0D2B5E;--teal:#00A8A8;--teal2:#00C8C8;--teal-soft:rgba(0,168,168,0.1);--teal-border:rgba(0,168,168,0.2);--teal-bg:#F0FAFA;--gold:#F5A623;--white:#fff;--bg:#F7F9FC;--text:#1E2D40;--text2:#4A5568;--muted:#8A9BB0;--border:#E8EDF4;--line:#06C755;--r:14px;--shadow:0 4px 20px rgba(13,43,94,.09);}
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{font-family:"IBM Plex Sans Thai",sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:15px;overflow-x:hidden;}
-h1,h2,h3,.mali{font-family:"Mali",cursive;}
-a{text-decoration:none;}
-nav{background:#fff;border-bottom:1.5px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:90;box-shadow:0 2px 8px rgba(13,43,94,.06);}
-.brand{display:flex;align-items:center;gap:10px;}
-.brand-logo{width:36px;height:36px;background:var(--navy);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--teal2);font-family:"Mali",cursive;font-size:16px;font-weight:700;}
-.brand-name{font-family:"Mali",cursive;font-size:20px;font-weight:700;color:var(--navy);}
+:root{
+  --navy:#0D2B5E;--navy2:#1A3A7A;--teal:#00A8A8;--teal2:#00C8C8;
+  --teal-bg:#F0FAFA;--teal-soft:rgba(0,168,168,0.1);--teal-border:rgba(0,168,168,0.2);
+  --gold:#F5A623;--white:#FFFFFF;--bg:#F7F9FC;--surface:#FFFFFF;
+  --text:#1E2D40;--text2:#4A5568;--muted:#8A9BB0;--border:#E8EDF4;
+  --line:#06C755;--pink:#FF6B9D;--r:14px;
+  --shadow-sm:0 2px 8px rgba(13,43,94,0.06);--shadow:0 4px 20px rgba(13,43,94,0.09);
+  --shadow-lg:0 8px 40px rgba(13,43,94,0.13);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'IBM Plex Sans Thai',sans-serif;color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden;font-size:15px;}
+h1,h2,h3,.brand-name,.mali{font-family:'Mali',cursive;}
+
+/* COOKIE */
+.cookie{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:#fff;padding:14px 5%;display:flex;align-items:center;gap:16px;z-index:999;flex-wrap:wrap;transition:transform .3s;}
+.cookie.gone{transform:translateY(110%);}
+.cookie-txt{font-size:13px;color:rgba(255,255,255,0.8);flex:1;}
+.cookie-txt a{color:var(--teal2);text-decoration:none;}
+.btn-ck-yes{background:var(--teal);color:#fff;border:none;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;}
+.btn-ck-no{background:none;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.6);padding:8px 16px;border-radius:8px;font-size:13px;cursor:pointer;font-family:inherit;}
+
+/* FLOAT LINE */
+.float-line{position:fixed;bottom:24px;right:20px;z-index:98;width:54px;height:54px;background:var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 18px rgba(6,199,85,0.45);animation:pulse 2.5s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 4px 18px rgba(6,199,85,0.4);}50%{box-shadow:0 4px 32px rgba(6,199,85,0.65);}}
+
+/* TOPBAR */
+.topbar{background:var(--navy);padding:7px 5%;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+.topbar-txt{color:rgba(255,255,255,0.7);font-size:12.5px;}
+.topbar-line{color:var(--teal2);font-size:12.5px;text-decoration:none;font-weight:500;}
+
+/* NAV */
+nav{background:#fff;border-bottom:1.5px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:66px;position:sticky;top:0;z-index:90;box-shadow:var(--shadow-sm);}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.brand-logo{width:40px;height:40px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.brand-logo img{width:36px;height:36px;border-radius:8px;object-fit:cover;}
+.brand-name{font-size:21px;font-weight:700;color:var(--navy);}
 .brand-name span{color:var(--teal);}
-.nav-back{display:flex;align-items:center;gap:8px;color:var(--text2);font-size:14px;font-weight:500;padding:8px 14px;border-radius:8px;transition:all .18s;border:1.5px solid var(--border);}
-.nav-back:hover{background:var(--teal-soft);color:var(--teal);border-color:var(--teal-border);}
-.nav-cta{background:var(--line);color:#fff;padding:9px 20px;border-radius:10px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px;transition:filter .2s;}
-.nav-cta:hover{filter:brightness(1.07);}
-.float-line{position:fixed;bottom:24px;right:20px;z-index:98;width:52px;height:52px;background:var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 18px rgba(6,199,85,.45);animation:pulse 2.5s infinite;}
-@keyframes pulse{0%,100%{box-shadow:0 4px 18px rgba(6,199,85,.4);}50%{box-shadow:0 4px 32px rgba(6,199,85,.65);}}
-.hero-sub{background:linear-gradient(150deg,#EBF4FF 0%,var(--teal-bg) 100%);padding:52px 5% 48px;}
-.breadcrumb{font-size:12.5px;color:var(--muted);margin-bottom:14px;}
-.breadcrumb a{color:var(--teal);}
-.page-title{font-size:34px;font-weight:700;color:var(--navy);line-height:1.25;margin-bottom:12px;}
-.page-desc{color:var(--text2);font-size:15px;max-width:600px;line-height:1.75;margin-bottom:24px;}
-.badge-row{display:flex;gap:10px;flex-wrap:wrap;}
-.badge{display:flex;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--border);padding:6px 14px;border-radius:20px;font-size:13px;color:var(--text2);}
-.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;}
-section{padding:56px 5%;}
-.sec-bg{background:#fff;}
+.nav-menu{display:flex;align-items:center;gap:2px;}
+.nav-menu a{color:var(--text2);font-size:14px;font-weight:500;text-decoration:none;padding:8px 12px;border-radius:8px;transition:all .18s;white-space:nowrap;}
+.nav-menu a:hover{background:var(--teal-soft);color:var(--teal);}
+.drop{position:relative;}
+.drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:8px;min-width:220px;box-shadow:var(--shadow-lg);z-index:99;}
+.drop:hover .drop-menu{display:block;}
+.drop-menu a{display:block;padding:9px 14px;border-radius:8px;font-size:13.5px;color:var(--text);white-space:nowrap;}
+.drop-menu a:hover{background:var(--teal-soft);color:var(--teal);}
+.nav-cta{background:var(--line);color:#fff;padding:9px 20px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;margin-left:8px;transition:filter .2s,transform .15s;}
+.nav-cta:hover{filter:brightness(1.07);transform:translateY(-1px);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.burger span{width:22px;height:2px;background:var(--navy);border-radius:2px;}
+.mob-nav{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1.5px solid var(--border);padding:16px 5% 20px;z-index:89;flex-direction:column;gap:4px;box-shadow:var(--shadow);}
+.mob-nav a{padding:11px 16px;border-radius:8px;color:var(--text);text-decoration:none;font-size:15px;display:block;}
+.mob-nav a:hover{background:var(--teal-soft);}
+.mob-cta{background:var(--line);color:#fff!important;text-align:center;border-radius:10px;font-weight:600!important;margin-top:6px;}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#EBF4FF 0%,var(--teal-bg) 100%);padding:72px 5% 0;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:end;position:relative;overflow:hidden;min-height:520px;}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(0,168,168,0.12) 0%,transparent 65%);}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1.5px solid var(--teal-border);color:var(--teal);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:20px;letter-spacing:.5px;}
+.hero h1{font-size:38px;font-weight:700;color:var(--navy);line-height:1.22;margin-bottom:16px;}
+.hero h1 em{font-style:normal;color:var(--teal);}
+.hero-desc{color:var(--text2);font-size:15px;margin-bottom:28px;max-width:500px;line-height:1.75;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+.btn-main{background:var(--line);color:#fff;padding:13px 26px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:7px;box-shadow:0 4px 18px rgba(6,199,85,0.3);transition:filter .2s,transform .15s;}
+.btn-main:hover{filter:brightness(1.07);transform:translateY(-1px);}
+.btn-sec{border:1.5px solid var(--navy);color:var(--navy);padding:12px 22px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;background:#fff;transition:all .18s;}
+.btn-sec:hover{background:var(--navy);color:#fff;}
+.hero-pills{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:44px;}
+.pill{display:flex;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--border);padding:6px 14px;border-radius:20px;font-size:13px;color:var(--text2);}
+.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.hero-card{background:#fff;border-radius:16px 16px 0 0;box-shadow:var(--shadow-lg);padding:24px 22px 28px;border:1.5px solid var(--border);align-self:end;}
+.hero-card-title{font-family:'Mali',cursive;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:5px;}
+.hero-card-sub{font-size:12.5px;color:var(--muted);margin-bottom:18px;}
+.hero-items{display:flex;flex-direction:column;gap:10px;}
+.hero-item{display:flex;align-items:center;gap:12px;padding:11px 13px;border-radius:10px;background:var(--bg);border:1.5px solid var(--border);}
+.hi-icon{width:34px;height:34px;border-radius:8px;background:var(--teal-soft);border:1.5px solid var(--teal-border);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.hi-text{font-size:13px;font-weight:500;color:var(--text);}
+.hi-sub{font-size:11.5px;color:var(--muted);}
+
+/* HOW TO LEARN */
+.learn-modes{background:#fff;padding:56px 5%;}
+.modes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+.mode-card{border:1.5px solid var(--border);border-radius:16px;padding:28px 22px;text-align:center;transition:all .2s;position:relative;overflow:hidden;}
+.mode-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;transition:opacity .2s;opacity:0;}
+.mode-card:nth-child(1)::before{background:linear-gradient(90deg,var(--teal),var(--teal2));}
+.mode-card:nth-child(2)::before{background:linear-gradient(90deg,var(--gold),#FFD700);}
+.mode-card:nth-child(3)::before{background:linear-gradient(90deg,var(--pink),#FF8FAB);}
+.mode-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.mode-card:hover::before{opacity:1;}
+.mode-icon{font-size:36px;margin-bottom:14px;}
+.mode-card h3{font-family:'Mali',cursive;font-size:17px;color:var(--navy);margin-bottom:10px;}
+.mode-card p{font-size:13.5px;color:var(--text2);line-height:1.7;}
+
+/* SECTION */
+section{padding:72px 5%;}
+.eyebrow{color:var(--teal);font-size:11.5px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:10px;}
+.sec-title{font-size:28px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.3;}
+.sec-sub{color:var(--text2);font-size:15px;max-width:540px;margin-bottom:40px;}
+
+/* SUBJECTS */
 .sec-cream{background:#F4F9FF;}
+.subj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
+.subj-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:20px 16px;text-decoration:none;display:block;transition:all .2s;position:relative;overflow:hidden;}
+.subj-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--teal);transform:scaleX(0);transition:transform .22s;transform-origin:left;}
+.subj-card:hover{border-color:var(--teal-border);box-shadow:var(--shadow);transform:translateY(-2px);}
+.subj-card:hover::after{transform:scaleX(1);}
+.subj-icon{font-size:26px;margin-bottom:9px;}
+.subj-card h3{font-family:'Mali',cursive;font-size:15px;color:var(--navy);margin-bottom:4px;}
+.subj-card p{font-size:12px;color:var(--muted);line-height:1.5;}
+.subj-tag{display:inline-block;margin-top:9px;background:var(--teal-soft);color:var(--teal);font-size:10.5px;font-weight:600;padding:2px 9px;border-radius:20px;}
+
+/* CURRICULUM */
+.curr-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.curr-tab{padding:8px 18px;border-radius:20px;border:1.5px solid var(--border);font-size:13.5px;font-weight:500;cursor:pointer;background:#fff;color:var(--text2);transition:all .2s;font-family:inherit;}
+.curr-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.curr-content{display:none;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:24px;}
+.curr-content.active{display:block;}
+.curr-content h4{font-family:'Mali',cursive;font-size:16px;color:var(--navy);margin-bottom:12px;}
+.curr-subjects{color:var(--text2);font-size:14px;line-height:1.9;}
+
+/* PRICING */
+.pricing-bg{background:var(--navy);}
+.pricing-bg .eyebrow{color:var(--teal2);}
+.pricing-bg .sec-title{color:#fff;}
+.pricing-bg .sec-sub{color:rgba(255,255,255,0.5);}
+.pricing-toggle{display:flex;gap:0;background:rgba(255,255,255,0.08);border-radius:12px;padding:4px;margin-bottom:36px;width:fit-content;}
+.ptoggle-btn{padding:9px 24px;border-radius:9px;border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;color:rgba(255,255,255,0.6);background:transparent;transition:all .2s;}
+.ptoggle-btn.active{background:#fff;color:var(--navy);}
+.pricing-table{display:none;overflow-x:auto;}
+.pricing-table.active{display:block;}
+.ptable{width:100%;border-collapse:collapse;font-size:14px;}
+.ptable th{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-weight:500;padding:12px 16px;text-align:center;font-size:13px;}
+.ptable th:first-child{text-align:left;}
+.ptable td{padding:13px 16px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);}
+.ptable td:first-child{text-align:left;color:#fff;font-weight:500;}
+.ptable tr:hover td{background:rgba(255,255,255,0.04);}
+.ptable .price{font-family:'Mali',cursive;font-size:15px;font-weight:600;color:var(--teal2);}
+.ptable .price-note{font-size:11px;color:rgba(255,255,255,0.35);margin-top:2px;}
+.pricing-note{margin-top:16px;color:rgba(255,255,255,0.4);font-size:12.5px;}
+.pricing-note span{color:var(--gold);}
+@keyframes fadeTab{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.pricing-table.active{animation:fadeTab .25s ease;}
+
+/* VALUE PROPS */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.val-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px 22px;}
+.val-tag{display:inline-block;font-family:'Mali',cursive;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:14px;}
+.val-tag.q{background:rgba(0,168,168,0.1);color:var(--teal);}
+.val-tag.r{background:rgba(245,166,35,0.1);color:var(--gold);}
+.val-tag.l{background:rgba(255,107,157,0.1);color:var(--pink);}
+.val-card h3{font-family:'Mali',cursive;font-size:18px;color:var(--navy);margin-bottom:10px;}
+.val-card p{font-size:13.5px;color:var(--text2);line-height:1.75;}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.about-badge{display:inline-block;background:var(--teal-soft);color:var(--teal);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.about-text h2{font-family:'Mali',cursive;font-size:28px;color:var(--navy);margin-bottom:14px;line-height:1.3;}
+.about-text p{color:var(--text2);font-size:14.5px;line-height:1.85;margin-bottom:12px;}
+.about-points{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+.about-points li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text2);}
+.apoint-dot{width:18px;height:18px;border-radius:50%;background:var(--teal-soft);border:1.5px solid var(--teal-border);color:var(--teal);font-size:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.about-img{border-radius:20px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:32px;}
+.about-stat{text-align:center;}
+.about-stat-n{font-family:'Mali',cursive;font-size:32px;font-weight:700;color:var(--teal2);}
+.about-stat-l{font-size:13px;color:rgba(255,255,255,0.55);margin-top:2px;}
+.about-stat-div{width:1px;height:40px;background:rgba(255,255,255,0.1);}
+.about-stats-row{display:flex;gap:0;align-items:center;}
+
+/* HOW STEPS */
 .sec-navy{background:var(--navy);}
-.eyebrow{color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;}
-.sec-title{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.3;}
-.sec-navy .sec-title{color:#fff;}
 .sec-navy .eyebrow{color:var(--teal2);}
-.sec-navy p{color:rgba(255,255,255,0.55);}
-.sec-sub{color:var(--text2);font-size:14.5px;max-width:540px;margin-bottom:32px;}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
-.card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:22px 18px;transition:all .2s;}
-.card:hover{border-color:var(--teal-border);box-shadow:var(--shadow);transform:translateY(-2px);}
-.card h3{font-family:"Mali",cursive;font-size:16px;color:var(--navy);margin-bottom:8px;}
-.card p{font-size:13.5px;color:var(--text2);line-height:1.65;}
-.card-icon{font-size:28px;margin-bottom:10px;}
-.tag{display:inline-block;background:var(--teal-soft);color:var(--teal);font-size:11px;font-weight:600;padding:2px 10px;border-radius:20px;margin-top:10px;}
-.cta-box{background:linear-gradient(135deg,var(--navy) 0%,#1B4080 100%);border-radius:20px;padding:40px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-.cta-box h2{font-family:"Mali",cursive;color:#fff;font-size:22px;margin-bottom:6px;}
-.cta-box p{color:rgba(255,255,255,0.55);font-size:13.5px;}
-.btn-cta{background:var(--line);color:#fff;padding:13px 28px;border-radius:10px;font-size:15px;font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-shadow:0 4px 20px rgba(6,199,85,.3);transition:filter .2s,transform .15s;}
+.sec-navy .sec-title{color:#fff;}
+.sec-navy .sec-sub{color:rgba(255,255,255,0.5);}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.07);}
+.step{padding:30px 22px;background:rgba(255,255,255,0.04);transition:background .2s;}
+.step:hover{background:rgba(0,168,168,0.07);}
+.step-n{font-family:'Mali',cursive;font-size:46px;font-weight:700;color:rgba(0,200,200,0.15);line-height:1;margin-bottom:14px;}
+.step h3{font-family:'Mali',cursive;color:var(--teal2);font-size:16px;margin-bottom:8px;}
+.step p{color:rgba(255,255,255,0.5);font-size:13.5px;line-height:1.7;}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--navy) 0%,#1B4080 100%);padding:52px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;}
+.cta-band::before{content:'';position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(0,168,168,0.12) 0%,transparent 70%);}
+.cta-band h2{font-family:'Mali',cursive;color:#fff;font-size:24px;margin-bottom:7px;}
+.cta-band p{color:rgba(255,255,255,0.55);font-size:14px;}
+.btn-cta{background:var(--line);color:#fff;padding:14px 32px;border-radius:11px;font-size:15px;font-weight:600;text-decoration:none;white-space:nowrap;box-shadow:0 4px 20px rgba(6,199,85,0.35);transition:filter .2s,transform .15s;flex-shrink:0;}
 .btn-cta:hover{filter:brightness(1.07);transform:translateY(-1px);}
-footer{background:var(--navy);padding:36px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-.ft-brand{font-family:"Mali",cursive;font-size:18px;color:#fff;}
+
+/* REVIEWS - SPLIT INTO 2 TYPES */
+.rv-tabs{display:flex;gap:8px;margin-bottom:28px;}
+.rv-tab{padding:8px 20px;border-radius:20px;border:1.5px solid var(--border);font-size:13.5px;cursor:pointer;background:#fff;color:var(--text2);font-family:inherit;transition:all .2s;}
+.rv-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.rv-panel{display:none;}
+.rv-panel.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;animation:fadeTab .25s ease;}
+.rv-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:22px;transition:box-shadow .2s;}
+.rv-card:hover{box-shadow:var(--shadow);}
+.stars{color:var(--gold);font-size:13px;margin-bottom:10px;letter-spacing:2px;}
+.rv-txt{color:var(--text2);font-size:14px;line-height:1.75;margin-bottom:16px;}
+.rv-person{display:flex;align-items:center;gap:10px;}
+.rv-av{width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--teal2);font-family:'Mali',cursive;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rv-name{font-size:13px;font-weight:600;color:var(--navy);}
+.rv-role{font-size:12px;color:var(--muted);}
+/* Admission badge */
+.admit-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:20px;display:flex;align-items:center;gap:14px;transition:all .2s;}
+.admit-card:hover{border-color:var(--teal-border);box-shadow:var(--shadow);}
+.admit-icon{width:44px;height:44px;border-radius:10px;background:var(--teal-soft);border:1.5px solid var(--teal-border);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.admit-name{font-size:13.5px;font-weight:600;color:var(--navy);}
+.admit-uni{font-size:12px;color:var(--muted);}
+.admit-badge{margin-left:auto;background:rgba(0,168,168,0.1);color:var(--teal);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;white-space:nowrap;}
+
+/* FAQ */
+.faq-inner{max-width:700px;}
+.faq-list{display:flex;flex-direction:column;gap:3px;}
+.faq-item{border:1.5px solid var(--border);border-radius:10px;overflow:hidden;}
+.faq-q{padding:15px 18px;font-weight:600;font-size:14.5px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:background .15s;gap:12px;}
+.faq-q:hover{background:var(--teal-bg);}
+.faq-q.open{background:var(--navy);color:#fff;}
+.faq-arr{font-size:12px;transition:transform .2s;flex-shrink:0;}
+.faq-q.open .faq-arr{transform:rotate(180deg);color:var(--teal2);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-a.open{max-height:240px;}
+.faq-a-in{padding:15px 18px;font-size:13.5px;color:var(--text2);line-height:1.75;}
+
+/* FOOTER */
+footer{background:var(--navy);padding:52px 5% 28px;}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.ft-brand{font-family:'Mali',cursive;font-size:22px;font-weight:700;color:#fff;margin-bottom:7px;}
 .ft-brand span{color:var(--teal2);}
-.ft-copy{color:rgba(255,255,255,.3);font-size:12px;margin-top:4px;}
-.ft-line{display:inline-flex;align-items:center;gap:7px;background:var(--line);color:#fff;padding:10px 20px;border-radius:10px;font-size:13.5px;font-weight:600;transition:filter .2s;}
+.ft-tagline{color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:20px;line-height:1.7;}
+.ft-line{display:inline-flex;align-items:center;gap:7px;background:var(--line);color:#fff;padding:11px 22px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;transition:filter .2s;}
 .ft-line:hover{filter:brightness(1.07);}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);}
-.step{padding:28px 20px;background:rgba(255,255,255,.04);}
-.step-n{font-family:"Mali",cursive;font-size:44px;font-weight:700;color:rgba(0,200,200,.15);line-height:1;margin-bottom:12px;}
-.step h3{font-family:"Mali",cursive;color:var(--teal2);font-size:15px;margin-bottom:7px;}
-.step p{color:rgba(255,255,255,.5);font-size:13px;line-height:1.65;}
-.highlight-box{background:var(--teal-soft);border:1.5px solid var(--teal-border);border-radius:12px;padding:16px 20px;margin-bottom:16px;}
-.highlight-box h4{font-family:"Mali",cursive;color:var(--teal);font-size:14px;margin-bottom:6px;}
-.highlight-box p{font-size:13px;color:var(--text2);line-height:1.7;}
-@media(max-width:700px){.steps{grid-template-columns:1fr;}.cta-box{flex-direction:column;text-align:center;}.page-title{font-size:26px;}}
+.ft-col h4{color:rgba(255,255,255,0.85);font-size:13.5px;font-weight:600;margin-bottom:14px;}
+.ft-col a{display:block;color:rgba(255,255,255,0.38);font-size:13px;text-decoration:none;margin-bottom:9px;transition:color .2s;}
+.ft-col a:hover{color:var(--teal2);}
+.ft-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.ft-copy{color:rgba(255,255,255,0.27);font-size:12px;}
+.ft-social{display:flex;gap:10px;}
+.soc-ico{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.45);display:flex;align-items:center;justify-content:center;font-size:13px;text-decoration:none;transition:all .2s;font-weight:600;}
+.soc-ico:hover{background:var(--teal);color:#fff;}
+
+
+/* TUTOR SLIDER */
+.tutor-slider-wrap{display:flex;align-items:center;gap:12px;padding:0 5%;}
+.tutor-track-outer{overflow:hidden;flex:1;}
+.tutor-track{display:flex;gap:20px;transition:transform .4s cubic-bezier(.25,.8,.25,1);}
+.tutor-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;min-width:calc(33.333% - 14px);flex-shrink:0;transition:all .2s;box-sizing:border-box;}
+.tutor-card:hover{border-color:var(--teal-border);box-shadow:var(--shadow);transform:translateY(-2px);}
+.tutor-photo{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px;border:3px solid var(--teal-border);}
+.tutor-body{text-align:center;}
+.tutor-name{font-family:"Mali",cursive;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.tutor-uni{font-size:12px;color:var(--teal);font-weight:500;margin-bottom:8px;line-height:1.5;}
+.tutor-subjects{font-size:13px;color:var(--text2);margin-bottom:8px;}
+.tutor-highlight{font-size:12px;color:var(--muted);background:var(--bg);padding:6px 10px;border-radius:8px;line-height:1.5;}
+.slider-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all .2s;flex-shrink:0;}
+.slider-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+.slider-dots{display:flex;justify-content:center;gap:8px;margin-top:20px;}
+.slider-dot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:all .2s;}
+.slider-dot.active{background:var(--teal);width:24px;border-radius:4px;}
+@media(max-width:900px){.tutor-card{min-width:calc(50% - 10px);}.tutor-slider-wrap{padding:0 2%;}}
+@media(max-width:600px){.tutor-card{min-width:100%;}}
+
+/* ANIM */
+.fu{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease;}
+.fu.vis{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding:48px 5% 0;}
+  .hero-card{display:none;}
+  nav .nav-menu{display:none;}
+  .burger{display:flex;}
+  .mob-nav.open{display:flex;}
+  .steps{grid-template-columns:1fr;}
+  .modes-grid{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  .ft-grid{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:28px;}
+  .sec-title{font-size:23px;}
+}
+@media(max-width:600px){
+  .cta-band{flex-direction:column;text-align:center;}
+  .ft-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:24px;}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPNHZDR2BC"></script>
@@ -82,51 +304,426 @@ footer{background:var(--navy);padding:36px 5%;display:flex;align-items:center;ju
 </script>
 </head>
 <body>
-<a class="float-line" href="https://line.me/R/ti/p/@455erqfq" title="ติดต่อหาติวเตอร์">💬</a>
-<nav>
-  <a class="brand" href="index.html">
-    <div class="brand-logo">T</div>
-    <div class="brand-name">TutorPro<span>TH</span></div>
-  </a>
-  <div style="display:flex;gap:10px;align-items:center;">
-    <a class="nav-back" href="index.html">← หน้าหลัก</a>
-    <a class="nav-cta" href="https://line.me/R/ti/p/@455erqfq">💬 ติดต่อหาติวเตอร์</a>
-  </div>
-</nav>
-<div class="hero-sub">
-  <div class="breadcrumb"><a href="index.html">หน้าหลัก</a> › <a href="/#curriculum">ระดับชั้น</a> › เรียนพิเศษระดับมัธยมต้น</div>
-  <div style="font-family:'Mali',cursive;font-size:42px;font-weight:700;color:var(--navy);margin-bottom:8px;">ม.1–3</div>
-  <h1 class="page-title">เรียนพิเศษระดับมัธยมต้น</h1>
-  <p class="page-desc">ระดับมัธยมต้นเป็นช่วงที่เนื้อหาเริ่มยากขึ้น การเรียนตัวต่อตัวช่วยให้น้องไม่ตกหล่นและพร้อมก้าวสู่มัธยมปลายอย่างมั่นใจ</p>
-  <div class="badge-row">
-    <div class="badge"><div class="badge-dot"></div>เรียนที่บ้าน</div>
-    <div class="badge"><div class="badge-dot"></div>ออนไลน์</div>
-    <div class="badge"><div class="badge-dot"></div>นอกสถานที่</div>
+
+<!-- COOKIE -->
+<div class="cookie" id="ckb">
+  <div class="cookie-txt">เว็บไซต์นี้ใช้คุกกี้เพื่อพัฒนาประสบการณ์การใช้งาน <a href="#">อ่านนโยบายคุกกี้</a></div>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button class="btn-ck-no" onclick="ckClose()">ปฏิเสธ</button>
+    <button class="btn-ck-yes" onclick="ckAccept()">ยอมรับทั้งหมด</button>
   </div>
 </div>
-<section class="sec-bg">
-  <div class="eyebrow">วิชาที่เปิดสอน</div>
-  <h2 class="sec-title">ครอบคลุมทุกวิชาในระดับนี้</h2>
-  <div class="grid3"><div class="card"><h3>✓ คณิต วิทย์ อังกฤษ ไทย สังคม</h3></div><div class="card"><h3>✓ เพิ่มเกรด ทบทวนบทเรียน</h3></div><div class="card"><h3>✓ สอบแข่งขัน</h3></div><div class="card"><h3>✓ ติวสอบเข้า ม.4</h3></div><div class="card"><h3>✓ ภาษาต่างประเทศ</h3></div><div class="card"><h3>✓ คอมพิวเตอร์ ดนตรี ศิลปะ</h3></div></div>
+
+<!-- FLOAT LINE -->
+<a class="float-line" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('float')" title="ติดต่อหาติวเตอร์">💬</a>
+
+<!-- NAV -->
+<nav>
+  <a class="brand" href="/">
+    <div class="brand-logo" style="background:var(--navy);color:var(--teal2);font-family:'Mali',cursive;font-size:18px;font-weight:700;">T</div>
+    <div class="brand-name">TutorPro<span>TH</span></div>
+  </a>
+  <div class="nav-menu">
+    <div class="drop"><a href="#subjects">วิชาที่สอน ▾</a>
+      <div class="drop-menu">
+        <a href="#subjects">📐 คณิตศาสตร์</a>
+        <a href="#subjects">🌏 ภาษาอังกฤษ</a>
+        <a href="#subjects">⚗️ วิทยาศาสตร์</a>
+        <a href="#subjects">📖 ภาษาไทย</a>
+        <a href="#subjects">🔤 ภาษาที่ 3</a>
+        <a href="#subjects">🎓 มหาวิทยาลัย / คนทำงาน</a>
+      </div>
+    </div>
+    <a href="#curriculum">หลักสูตร</a>
+    <a href="#pricing">ค่าเรียน</a>
+    <a href="#about">เกี่ยวกับเรา</a>
+    <a href="#reviews">รีวิว</a>
+    <a href="#faq">FAQ</a>
+    <a class="nav-cta" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('nav')">💬 ติดต่อหาติวเตอร์</a>
+  </div>
+  <div class="burger" onclick="togMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="#subjects" onclick="togMob()">📚 วิชาที่สอน</a>
+  <a href="#curriculum" onclick="togMob()">📋 หลักสูตร</a>
+  <a href="#pricing" onclick="togMob()">💰 ค่าเรียน</a>
+  <a href="#about" onclick="togMob()">🏫 เกี่ยวกับเรา</a>
+  <a href="#reviews" onclick="togMob()">⭐ รีวิว</a>
+  <a href="#faq" onclick="togMob()">❓ FAQ</a>
+  <a href="https://line.me/R/ti/p/@455erqfq" class="mob-cta" onclick="tl('mob')">💬 ติดต่อหาติวเตอร์กับเราได้เลย</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-badge">✦ ติวเตอร์ตัวต่อตัวคุณภาพ · ได้ผลจริง</div>
+    <h1>รับสอนพิเศษ<br><em>ตัวต่อตัวคุณภาพสูง</em><br>โดยติวเตอร์จากสถาบันชั้นนำ</h1>
+    <p class="hero-desc">ติวเตอร์ผ่านการคัดเลือกคุณภาพ จากมหาวิทยาลัยชั้นนำทั้งในและต่างประเทศ เรียนได้ทุกวิชา ทุกระดับชั้น เลือกวัน เวลา และสถานที่เองได้</p>
+    <div class="hero-btns">
+      <a class="btn-main" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('hero')">💬 ติดต่อหาติวเตอร์กับเราได้เลย</a>
+      <a class="btn-sec" href="#how">ดูขั้นตอน</a>
+    </div>
+    <div class="hero-pills">
+      <div class="pill"><div class="pill-dot"></div>เรียนที่บ้าน</div>
+      <div class="pill"><div class="pill-dot"></div>นอกสถานที่</div>
+      <div class="pill"><div class="pill-dot"></div>ออนไลน์</div>
+      <div class="pill"><div class="pill-dot"></div>ทุกวิชา ทุกระดับ</div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-card-title">เหมาะกับใคร?</div>
+    <div class="hero-card-sub">TutorProTH ดูแลผู้เรียนทุกกลุ่ม</div>
+    <div class="hero-items">
+      <div class="hero-item"><div class="hi-icon">📚</div><div><div class="hi-text">นักเรียนที่เรียนในห้องไม่ทัน</div><div class="hi-sub">อนุบาล – ม.ปลาย ทุกวิชา</div></div></div>
+      <div class="hero-item"><div class="hi-icon">🎯</div><div><div class="hi-text">เตรียมสอบเข้า / ติวสอบ</div><div class="hi-sub">ม.1, ม.4, TCAS, PAT, A-Level</div></div></div>
+      <div class="hero-item"><div class="hi-icon">🌏</div><div><div class="hi-text">เรียนภาษาต่างประเทศ</div><div class="hi-sub">อังกฤษ จีน ญี่ปุ่น เกาหลี และอื่นๆ</div></div></div>
+      <div class="hero-item"><div class="hi-icon">🎓</div><div><div class="hi-text">มหาวิทยาลัย & คนทำงาน</div><div class="hi-sub">ยืดหยุ่นตามเวลาที่สะดวก</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO LEARN -->
+<div class="learn-modes fu">
+  <div style="text-align:center;margin-bottom:8px;" class="eyebrow">รูปแบบการเรียน</div>
+  <h2 class="sec-title" style="text-align:center;">เลือกเรียนได้ตามความสะดวก</h2>
+  <div class="modes-grid">
+    <div class="mode-card">
+      <div class="mode-icon">💻</div>
+      <h3>เรียนออนไลน์</h3>
+      <p>เรียนผ่าน Zoom หรือ Google Meet สะดวกที่ไหนก็เรียนได้ เลือกโปรแกรมและเวลาเองได้ ไม่เสียเวลาเดินทาง</p>
+    </div>
+    <div class="mode-card">
+      <div class="mode-icon">🏪</div>
+      <h3>ห้างสรรพสินค้า / ร้านกาแฟ</h3>
+      <p>ไม่สะดวกเรียนที่บ้าน เลือกสถานที่นอกบ้านได้ตามต้องการ ไม่ว่าจะเป็นห้าง ร้านกาแฟ หรือสถานที่ที่ท่านสะดวก</p>
+    </div>
+    <div class="mode-card">
+      <div class="mode-icon">🏠</div>
+      <h3>สอนพิเศษที่บ้าน</h3>
+      <p>ติวเตอร์เดินทางมาสอนถึงบ้าน ที่ทำงาน หรือที่พักของท่าน ไม่ต้องเสียเวลาเดินทางออกจากบ้านเลย</p>
+    </div>
+  </div>
+</div>
+
+<!-- SUBJECTS -->
+<section id="subjects" class="sec-cream">
+  <div class="eyebrow fu">วิชาที่สอน</div>
+  <h2 class="sec-title fu">ครอบคลุมทุกวิชาที่ต้องการ</h2>
+  <p class="sec-sub fu">ติวเตอร์เฉพาะทางทุกสาขา ปรับเนื้อหาตามจุดอ่อนของผู้เรียนแต่ละคน</p>
+  <div class="subj-grid fu">
+    <a class="subj-card" href="math.html""><div class="subj-icon">📐</div><h3>คณิตศาสตร์</h3><p>ทุกระดับ จินตคณิต PAT1 A-Level</p><span class="subj-tag">ยอดนิยม</span></a>
+    <a class="subj-card" href="english.html""><div class="subj-icon">🌏</div><h3>ภาษาอังกฤษ</h3><p>Phonics, Grammar, TOEIC, IELTS</p><span class="subj-tag">ทุกระดับ</span></a>
+    <a class="subj-card" href="science.html""><div class="subj-icon">⚗️</div><h3>วิทยาศาสตร์</h3><p>ฟิสิกส์ เคมี ชีวะ ม.ต้น–ปลาย</p><span class="subj-tag">ม.ต้น–ปลาย</span></a>
+    <a class="subj-card" href="thai.html""><div class="subj-icon">📖</div><h3>ภาษาไทย</h3><p>อ่าน เขียน เรียงความ ONET</p><span class="subj-tag">ทุกระดับ</span></a>
+    <a class="subj-card" href="language3.html""><div class="subj-icon">🔤</div><h3>ภาษาที่ 3</h3><p>จีน ญี่ปุ่น เกาหลี ฝรั่งเศส และอื่นๆ</p><span class="subj-tag">มีเจ้าของภาษา</span></a>
+    <a class="subj-card" href="social.html""><div class="subj-icon">🗺️</div><h3>สังคมศึกษา</h3><p>ป.–ม.ปลาย เตรียมสอบ ONET TGAT</p><span class="subj-tag">ทุกระดับ</span></a>
+    <a class="subj-card" href="#""><div class="subj-icon">🎨</div><h3>ศิลปะ / ดนตรี</h3><p>Drawing ดนตรี กีฬา ทักษะพิเศษ</p><span class="subj-tag">ทุกระดับ</span></a>
+    <a class="subj-card" href="#""><div class="subj-icon">💻</div><h3>คอมพิวเตอร์</h3><p>Programming การออกแบบ IT</p><span class="subj-tag">ทุกระดับ</span></a>
+    <a class="subj-card" href="university.html""><div class="subj-icon">🎓</div><h3>มหาวิทยาลัย</h3><p>Calculus สถิติ บัญชี เศรษฐศาสตร์</p><span class="subj-tag">ม.–คนทำงาน</span></a>
+  </div>
 </section>
-<section class="sec-navy">
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="eyebrow fu">หลักสูตรที่เปิดสอน</div>
+  <h2 class="sec-title fu">ครอบคลุมทุกระดับชั้น</h2>
+  <div class="curr-tabs fu">
+    <button class="curr-tab active" onclick="switchTab(this,'c0')">เตรียมอนุบาล–อนุบาล</button>
+    <button class="curr-tab" onclick="switchTab(this,'c1')">ประถมศึกษา</button>
+    <button class="curr-tab" onclick="switchTab(this,'c2')">มัธยมต้น</button>
+    <button class="curr-tab" onclick="switchTab(this,'c3')">มัธยมปลาย</button>
+    <button class="curr-tab" onclick="switchTab(this,'c4')">มหาวิทยาลัย</button>
+    <button class="curr-tab" onclick="switchTab(this,'c5')">บุคคลทั่วไป</button>
+  </div>
+  <div id="c0" class="curr-content active fu">
+    <h4>🌱 เตรียมอนุบาล – อนุบาล</h4>
+    <div class="curr-subjects">คณิตศาสตร์ วิทยาศาสตร์ ภาษาอังกฤษ ภาษาไทย Phonics ฝึกพูด อ่าน เขียน เชาว์ปัญญา กีฬา การบ้านทั่วไป <strong>เตรียมสอบเข้า ป.1 · ติวสอบเข้าสาธิต</strong> และวิชาอื่นๆ</div>
+  </div>
+  <div id="c1" class="curr-content fu">
+    <h4>📚 ประถมศึกษา</h4>
+    <div class="curr-subjects">คณิตศาสตร์ วิทยาศาสตร์ ภาษาอังกฤษ ภาษาไทย สังคม ศิลปะ คอมพิวเตอร์ ดนตรี จินตคณิต ภาษาต่างประเทศ ภาษาจีน <strong>เพิ่มเกรด · ทบทวนเตรียมสอบ · สอบแข่งขัน</strong> และวิชาอื่นๆ</div>
+  </div>
+  <div id="c2" class="curr-content fu">
+    <h4>🏫 มัธยมศึกษาตอนต้น</h4>
+    <div class="curr-subjects">คณิตศาสตร์ วิทยาศาสตร์ สังคม ภาษาไทย อังกฤษ ศิลปะ ดนตรี คอมพิวเตอร์ <strong>เพิ่มเกรด · ทบทวนเตรียมสอบ · สอบแข่งขัน · ติวสอบเข้า ม.4</strong> และวิชาอื่นๆ</div>
+  </div>
+  <div id="c3" class="curr-content fu">
+    <h4>🏆 มัธยมศึกษาตอนปลาย</h4>
+    <div class="curr-subjects">คณิตศาสตร์ วิทยาศาสตร์ ฟิสิกส์ เคมี ชีววิทยา สังคมศึกษา ภาษาไทย ภาษาต่างประเทศ ศิลปะ ดนตรี <br/><strong>เตรียมสอบ:</strong> TGAT · TPAT · TCAS · O-NET · CU-TEP · TU-GET · IGCSE · CU-AAT · CU-BEST · SAT · TOEIC · TOEFL · IELTS · A-Level · TBAT · GED · GCSE · NETSAT · สอวน. · สสวท. · กสพท และวิชาอื่นๆ</div>
+  </div>
+  <div id="c4" class="curr-content fu">
+    <h4>🎓 มหาวิทยาลัย</h4>
+    <div class="curr-subjects">สถิติ แคลคูลัส Drawing เคมี ฟิสิกส์ ชีววิทยา บัญชี การเงิน เศรษฐศาสตร์ กฎหมาย CU-Best ภาษาอังกฤษ จีน ญี่ปุ่น การออกแบบ การตลาด <strong>TOEIC · TOEFL · IELTS</strong> หาผู้สอนวิชาเฉพาะทาง และวิชาอื่นๆ</div>
+  </div>
+  <div id="c5" class="curr-content fu">
+    <h4>👤 บุคคลทั่วไป / คนทำงาน</h4>
+    <div class="curr-subjects"><strong>TOEIC · TOEFL · IELTS</strong> ภาษาไทยสำหรับชาวต่างชาติ ภาษาอังกฤษ จีน ญี่ปุ่น สเปน อาหรับ คอมพิวเตอร์ การทำบัญชี ดนตรี กีฬา ทักษะอาชีพ วิชาในองค์กร และวิชาอื่นๆ</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-bg">
+  <div class="eyebrow">ค่าเรียน</div>
+  <h2 class="sec-title fu">อัตราค่าเรียนตัวต่อตัว</h2>
+  <p class="sec-sub fu">ราคาเริ่มต้นต่อชั่วโมง — สนใจคุยรายละเอียดเพิ่มเติมได้ทาง LINE</p>
+
+  <div class="pricing-toggle fu">
+    <button class="ptoggle-btn active" onclick="switchPrice(this,'p0')">เรียนปรับพื้นฐาน / เพิ่มเกรด</button>
+    <button class="ptoggle-btn" onclick="switchPrice(this,'p1')">ติวสอบ</button>
+  </div>
+
+  <div id="p0" class="pricing-table active fu">
+    <table class="ptable">
+      <thead>
+        <tr><th>ระดับชั้น</th><th>1 คน</th><th>2 คน</th><th>3 คน</th><th>4 คน</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>อนุบาล</td><td><div class="price">150</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">120</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">100</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">100</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>ประถมศึกษา</td><td><div class="price">180</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">140</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">120</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">100</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>มัธยมต้น</td><td><div class="price">200</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">150</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">130</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">110</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>มัธยมปลาย</td><td><div class="price">200</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">150</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">130</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">110</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>มหาวิทยาลัย</td><td><div class="price">250</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">220</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">200</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">180</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>วัยทำงาน</td><td><div class="price">250</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">220</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">200</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">180</div><div class="price-note">บาท/ชม.</div></td></tr>
+      </tbody>
+    </table>
+    <div class="pricing-note">* ราคาเป็นราคาเริ่มต้น 1 ชั่วโมง · <span>นอกสถานที่เริ่มต้น 250 บาท/ชม.</span> · รวมค่าเอกสารการเรียนของติวเตอร์แล้ว</div>
+  </div>
+
+  <div id="p1" class="pricing-table fu">
+    <table class="ptable">
+      <thead>
+        <tr><th>ระดับ</th><th>1 คน</th><th>2 คน</th><th>3 คน</th><th>4 คน</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ติวสอบเข้า ป.1</td><td><div class="price">180</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">140</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">120</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">100</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>ติวสอบเข้า ม.1</td><td><div class="price">200</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">150</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">130</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">110</div><div class="price-note">บาท/ชม.</div></td></tr>
+        <tr><td>ติวสอบเข้า ม.4 / มหาวิทยาลัย</td><td><div class="price">250</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">200</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">150</div><div class="price-note">บาท/ชม.</div></td><td><div class="price">130</div><div class="price-note">บาท/ชม.</div></td></tr>
+      </tbody>
+    </table>
+    <div class="pricing-note">* ราคาเป็นราคาเริ่มต้น 1 ชั่วโมง · <span>นอกสถานที่เริ่มต้น 250 บาท/ชม.</span> · รวมค่าเอกสารการเรียนของติวเตอร์แล้ว</div>
+  </div>
+
+  <div style="margin-top:28px;text-align:center;">
+    <a class="btn-cta" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('pricing')" style="display:inline-flex;align-items:center;gap:8px;">💬 สนใจคุยรายละเอียดได้เลย</a>
+  </div>
+</section>
+
+<!-- TUTORS SLIDER -->
+<section id="tutors" style="background:var(--bg);overflow:hidden;">
+  <div class="eyebrow fu">ติวเตอร์ของเรา</div>
+  <h2 class="sec-title fu">ติวเตอร์คุณภาพจากสถาบันชั้นนำ</h2>
+  <p class="sec-sub fu">ทุกคนผ่านการคัดเลือกคุณภาพ มีประสบการณ์สอนจริง พร้อมปรับการสอนให้ตรงกับผู้เรียนแต่ละคน</p>
+  <div class="tutor-slider-wrap fu">
+    <button class="slider-btn slider-prev" onclick="slideMove(-1)">&#8249;</button>
+    <div class="tutor-track-outer">
+      <div class="tutor-track" id="tutorTrack">
+        <div class="tutor-card" onclick="location.href='tutor-pin.html'"><div class="tutor-photo">&#128105;&#8205;&#127891;</div><div class="tutor-body"><div class="tutor-name">พี่พิณ</div><div class="tutor-uni">&#127963; อักษรศาสตร์ จุฬาฯ · เอกภาษาอังกฤษ (GPA 4.00)</div><div class="tutor-subjects">ภาษาอังกฤษ · CU-TEP · A-Level · TGAT</div><div class="tutor-highlight">A-Level Eng 100/100 · CU-TEP 105/120</div></div></div>
+        <div class="tutor-card" onclick="location.href='tutor-ploypin.html'"><div class="tutor-photo">&#128105;&#8205;&#9877;</div><div class="tutor-body"><div class="tutor-name">พี่พลอยพิณ</div><div class="tutor-uni">&#127963; สัตวแพทย์ + วิทยาศาสตร์ชีววิทยา จุฬาฯ</div><div class="tutor-subjects">ชีววิทยา · เคมี · สอวน. · ความถนัดแพทย์</div><div class="tutor-highlight">สอวน. ชีวะ · เชี่ยวชาญสอบเข้าแพทย์</div></div></div>
+        <div class="tutor-card" onclick="location.href='tutor-poon.html'"><div class="tutor-photo">&#128104;&#8205;&#128188;</div><div class="tutor-body"><div class="tutor-name">พี่ปุ้น</div><div class="tutor-uni">&#127963; วิศวะเคมี SIIT มธ. + ป.โท เศรษฐศาสตร์ มธ.</div><div class="tutor-subjects">เคมี · คณิต · ฟิสิกส์ · เศรษฐศาสตร์ · IGCSE</div><div class="tutor-highlight">นักเรียนสอบติดแพทย์รามา · วิศวะ KMITL · จุฬา</div></div></div>
+        <div class="tutor-card" onclick="location.href='tutor-neo.html'"><div class="tutor-photo">&#128104;&#8205;&#128300;</div><div class="tutor-body"><div class="tutor-name">พี่นีโอ</div><div class="tutor-uni">&#127963; วิศวกรรมสิ่งแวดล้อม จุฬาฯ</div><div class="tutor-subjects">ฟิสิกส์ · คณิตศาสตร์ ม.ต้น–ปลาย</div><div class="tutor-highlight">สอนนักเรียนเตรียมอุดม · ราชินี · เทพศิรินทร์</div></div></div>
+        <div class="tutor-card" onclick="location.href='tutor-nat.html'"><div class="tutor-photo">&#128104;&#8205;&#128187;</div><div class="tutor-body"><div class="tutor-name">พี่ณัช</div><div class="tutor-uni">&#127963; วิศวกรรมไฟฟ้า จุฬาฯ (GPA 3.47)</div><div class="tutor-subjects">ฟิสิกส์ · คณิต · Calculus · สอวน.</div><div class="tutor-highlight">สอวน. ฟิสิกส์ + คอมพิวเตอร์ · วมว. สวนกุหลาบ</div></div></div>
+        <div class="tutor-card" onclick="location.href='tutor-al.html'"><div class="tutor-photo">&#128105;&#8205;&#128300;</div><div class="tutor-body"><div class="tutor-name">พี่แอล</div><div class="tutor-uni">&#127963; วิทยาศาสตร์ศึกษา ม.เกษตรศาสตร์</div><div class="tutor-subjects">เคมี · ฟิสิกส์ · SAT Math · A-Level · สอวน.</div><div class="tutor-highlight">ติวเตรียมนายร้อย · แพทย์อินเตอร์ · Cambridge</div></div></div>
+      </div>
+    </div>
+    <button class="slider-btn slider-next" onclick="slideMove(1)">&#8250;</button>
+  </div>
+  <div class="slider-dots" id="sliderDots"></div>
+  <div style="text-align:center;margin-top:28px;padding:0 5% 0;"><a class="btn-main" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('tutors')" style="display:inline-flex;align-items:center;gap:8px;margin:0 auto;">&#128172; สนใจติดต่อหาติวเตอร์ได้เลย</a></div>
+</section>
+
+<!-- VALUES -->
+<section id="about">
+  <div class="eyebrow fu">จุดเด่นของเรา</div>
+  <h2 class="sec-title fu">ทำไมต้อง TutorProTH?</h2>
+  <div class="values-grid fu">
+    <div class="val-card">
+      <span class="val-tag q">QUALITY · คุณภาพ</span>
+      <h3>ติวเตอร์คุณภาพที่ตรงกับผู้เรียน</h3>
+      <p>ติวเตอร์ทุกคนผ่านการคัดเลือกอย่างเข้มข้น จากมหาวิทยาลัยชั้นนำทั้งในและต่างประเทศ มีประสบการณ์สอนจริง และพร้อมปรับวิธีการสอนให้ตรงกับความต้องการของผู้เรียนแต่ละคน</p>
+    </div>
+    <div class="val-card">
+      <span class="val-tag r">RAPIDLY · รวดเร็ว</span>
+      <h3>บริการรวดเร็วที่สุดในทุกด้าน</h3>
+      <p>เรามุ่งมั่นที่จะจัดหาติวเตอร์และตอบสนองความต้องการของผู้เรียนให้เร็วที่สุด ตั้งแต่การสมัคร การจับคู่ติวเตอร์ ไปจนถึงเริ่มเรียนจริง — ทุกขั้นตอนทำให้ผู้เรียนได้เริ่มต้นโดยเร็วที่สุด</p>
+    </div>
+    <div class="val-card">
+      <span class="val-tag l">LOYALTY · ความซื่อสัตย์</span>
+      <h3>ความซื่อสัตย์ที่ไว้วางใจได้</h3>
+      <p>ความซื่อสัตย์คือพื้นฐานที่เราทำมาโดยตลอด ทั้งด้านราคา คุณภาพติวเตอร์ และบริการหลังการขาย เพื่อให้ผู้เรียนและผู้ปกครองไว้วางใจเราได้อย่างแท้จริง</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div style="background:var(--teal-bg);padding:72px 5%;" class="sec-cream">
+  <div class="about-grid">
+    <div class="about-text">
+      <span class="about-badge">เกี่ยวกับ TutorProTH</span>
+      <h2>รับสอนพิเศษตัวต่อตัว<br>โดยติวเตอร์ที่ได้รับความไว้วางใจมากที่สุด</h2>
+      <p>TutorProTH คือบริการจัดหาติวเตอร์ตัวต่อตัวคุณภาพสูง ครอบคลุมทุกวิชา ทุกระดับชั้น ตั้งแต่อนุบาลจนถึงมหาวิทยาลัยและคนทำงาน เรียนได้ทั้งที่บ้าน นอกสถานที่ และออนไลน์</p>
+      <p>ติวเตอร์ทุกคนคัดเลือกมาจากสถาบันชั้นนำทั้งในและต่างประเทศ มีประสบการณ์สอนจริง และผ่านกระบวนการคัดกรองคุณภาพ ผู้เรียนสามารถเลือกวัน เวลา และสถานที่เองได้ตามความสะดวก</p>
+      <ul class="about-points">
+        <li><div class="apoint-dot">✓</div>ติวเตอร์คุณภาพจากมหาวิทยาลัยชั้นนำ ทั้งในและต่างประเทศ</li>
+        <li><div class="apoint-dot">✓</div>เลือกวัน เวลา และสถานที่เองได้ตามความสะดวก</li>
+        <li><div class="apoint-dot">✓</div>ติดต่อสะดวก ผ่าน LINE ตลอด 24 ชั่วโมง</li>
+        <li><div class="apoint-dot">✓</div>มีผลลัพธ์จริง — ผู้เรียนสอบติดมหาวิทยาลัยชั้นนำมากมาย</li>
+      </ul>
+    </div>
+    <div class="about-img">
+      <div class="about-stats-row" style="gap:32px;">
+        <div class="about-stat"><div class="about-stat-n">จุฬาฯ</div><div class="about-stat-l">ผู้เรียนสอบติด</div></div>
+        <div class="about-stat-div"></div>
+        <div class="about-stat"><div class="about-stat-n">มหิดล</div><div class="about-stat-l">ผู้เรียนสอบติด</div></div>
+      </div>
+      <div class="about-stats-row" style="gap:32px;margin-top:16px;">
+        <div class="about-stat"><div class="about-stat-n">มธ.</div><div class="about-stat-l">ผู้เรียนสอบติด</div></div>
+        <div class="about-stat-div"></div>
+        <div class="about-stat"><div class="about-stat-n">ศิริราช</div><div class="about-stat-l">แพทย์ศาสตร์</div></div>
+      </div>
+      <div style="color:rgba(255,255,255,0.35);font-size:12px;margin-top:20px;text-align:center;">และอีกมากมาย...</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW STEPS -->
+<section id="how" class="sec-navy">
   <div class="eyebrow">ขั้นตอน</div>
-  <h2 class="sec-title">เริ่มเรียนง่าย ใน 3 ขั้นตอน</h2>
-  <div class="steps">
-    <div class="step"><div class="step-n">01</div><h3>ทัก LINE บอกความต้องการ</h3><p>บอกวิชา ระดับชั้น และรูปแบบที่ต้องการ</p></div>
-    <div class="step"><div class="step-n">02</div><h3>แอดมินจัดหาติวเตอร์ให้</h3><p>จับคู่ติวเตอร์ที่เหมาะกับผู้เรียนมากที่สุด</p></div>
-    <div class="step"><div class="step-n">03</div><h3>นัดเวลาและเริ่มเรียนได้เลย</h3><p>เลือกวัน เวลา สถานที่ที่สะดวก</p></div>
+  <h2 class="sec-title fu">เริ่มเรียนง่าย ใน 3 ขั้นตอน</h2>
+  <p class="sec-sub fu">แค่ทัก LINE แอดมินดูแลให้ทุกอย่าง</p>
+  <div class="steps fu">
+    <div class="step"><div class="step-n">01</div><h3>ทัก LINE บอกความต้องการ</h3><p>บอกวิชา ระดับชั้น รูปแบบที่ต้องการ (ออนไลน์ / ที่บ้าน / นอกสถานที่) และเป้าหมายที่ต้องการ</p></div>
+    <div class="step"><div class="step-n">02</div><h3>แอดมินจัดหาติวเตอร์ให้</h3><p>เราช่วยจับคู่ติวเตอร์ที่เหมาะกับผู้เรียนมากที่สุด พร้อมแนะนำแนวทางการเรียนเบื้องต้น</p></div>
+    <div class="step"><div class="step-n">03</div><h3>นัดเวลาและเริ่มเรียนได้เลย</h3><p>เลือกวัน เวลา และสถานที่ที่สะดวก จากนั้นเริ่มเรียนกับติวเตอร์คุณภาพได้เลย</p></div>
   </div>
 </section>
-<section>
-  <div class="cta-box">
-    <div><h2>สนใจเรียนพิเศษม.1–3?</h2><p>ติดต่อมาคุยก่อนได้เลย แอดมินพร้อมจัดหาติวเตอร์ให้</p></div>
-    <a class="btn-cta" href="https://line.me/R/ti/p/@455erqfq">💬 ติดต่อหาติวเตอร์กับเราได้เลย</a>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div><h2>สนใจหาติวเตอร์คุณภาพ?</h2><p>ติดต่อมาคุยก่อนได้เลย ไม่มีค่าใช้จ่าย แอดมินพร้อมดูแลตลอด 24 ชั่วโมง</p></div>
+  <a class="btn-cta" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('cta-mid')">💬 ติดต่อหาติวเตอร์กับเราได้เลย</a>
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews" class="sec-cream">
+  <div class="eyebrow fu">รีวิวและผลลัพธ์</div>
+  <h2 class="sec-title fu">เสียงจากผู้ปกครองและผู้เรียน</h2>
+  <div class="rv-tabs fu">
+    <button class="rv-tab active" onclick="switchRv(this,'r0')">รีวิวคุณภาพการสอน</button>
+    <button class="rv-tab" onclick="switchRv(this,'r1')">🎓 ผู้เรียนสอบติด</button>
+  </div>
+
+  <div id="r0" class="rv-panel active">
+    <div class="rv-card"><div class="stars">★★★★★</div><p class="rv-txt">"เข้าใจดีครับ มาตรงต่อเวลา" — คุณพ่อน้องการันต์ เรียนอังกฤษ ม.1</p><div class="rv-person"><div class="rv-av">กร</div><div><div class="rv-name">คุณพ่อน้องการันต์</div><div class="rv-role">ผู้ปกครอง · อังกฤษ ม.1</div></div></div></div>
+    <div class="rv-card"><div class="stars">★★★★★</div><p class="rv-txt">"น้องเรียนแล้วเข้าใจเนื้อหาที่เรียนดีขึ้น บอกว่าครูพี่สอนเข้าใจง่าย"</p><div class="rv-person"><div class="rv-av">นข</div><div><div class="rv-name">คุณแม่น้องนาขวัญ</div><div class="rv-role">ผู้ปกครอง · ชีวะ ม.4</div></div></div></div>
+    <div class="rv-card"><div class="stars">★★★★★</div><p class="rv-txt">"สอนดีมากค่ะ น้องชอบมาก สอนเข้าใจและใจเย็น"</p><div class="rv-person"><div class="rv-av">ทน</div><div><div class="rv-name">คุณแม่น้อง</div><div class="rv-role">ผู้ปกครอง · คณิต</div></div></div></div>
+    <div class="rv-card"><div class="stars">★★★★★</div><p class="rv-txt">"สอนดีมากค่ะ เข้าใจแล้วก็ไม่เครียดเลยค่ะ"</p><div class="rv-person"><div class="rv-av">หน</div><div><div class="rv-name">น้องหน่า</div><div class="rv-role">นักเรียน · คณิต ม.5</div></div></div></div>
+    <div class="rv-card"><div class="stars">★★★★★</div><p class="rv-txt">"พี่ต้าสอน math ช่วยได้เยอะเลยค่ะ" — คุณแม่น้องต้นกล้า ที่สอบติดเทคโนสารสนเทศ พระจอมลาดกระบัง</p><div class="rv-person"><div class="rv-av">ตก</div><div><div class="rv-name">คุณแม่น้องต้นกล้า</div><div class="rv-role">ผู้ปกครอง · คณิต</div></div></div></div>
+    <div class="rv-card"><div class="stars">★★★★★</div><p class="rv-txt">"ขอบคุณครูที่เป็นส่วนหนึ่งในความสำเร็จของน้องค่ะ" — น้องออม สอบติดจิตวิทยา มธ. อันดับ 1 ตามที่ตั้งใจ</p><div class="rv-person"><div class="rv-av">ออ</div><div><div class="rv-name">คุณแม่น้องออม</div><div class="rv-role">ผู้ปกครอง · สอบเข้ามหาวิทยาลัย</div></div></div></div>
+  </div>
+
+  <div id="r1" class="rv-panel" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+    <div class="admit-card"><div class="admit-icon">🏥</div><div><div class="admit-name">น้องภัส</div><div class="admit-uni">แพทย์ศาสตร์ ศิริราช</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🔬</div><div><div class="admit-name">น้องหลิง</div><div class="admit-uni">สัตวแพทย์ จุฬาฯ</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🏛️</div><div><div class="admit-name">น้องมิก / ปริม / นาเดียร์ / ปั้นแป้ง / ไคโตะ</div><div class="admit-uni">นิติศาสตร์ ธรรมศาสตร์ / จุฬาฯ</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">⚡</div><div><div class="admit-name">น้องนาย / พอเพียง / ธัญ / น้ำ</div><div class="admit-uni">วิศวะ KMITL / มธ. / มหิดล</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">📊</div><div><div class="admit-name">น้องเจเจ / ออกัส / ปิม / นีโน่</div><div class="admit-uni">เศรษฐศาสตร์ / บัญชี จุฬาฯ / มก.</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🌿</div><div><div class="admit-name">น้องปิ่นปิ้น</div><div class="admit-uni">วิทยาศาสตร์ จุฬาฯ (Zoology อันดับ 1)</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">💊</div><div><div class="admit-name">น้องผึ้ง / ไออุ่น</div><div class="admit-uni">แพทย์แผนจีน HCU</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🎓</div><div><div class="admit-name">น้องคาราเมล / ออม</div><div class="admit-uni">บริหาร มหิดล / MUIC</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🎨</div><div><div class="admit-name">น้องปุ้ย / แคน / ก้อง / ดิจิ</div><div class="admit-uni">ศิลปศาสตร์ / สังคม / มนุษย์ มธ. / มศว</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🌍</div><div><div class="admit-name">น้องเฟย์</div><div class="admit-uni">เศรษฐศาสตร์การค้า ม.จีน (ทุนเต็ม)</div></div><span class="admit-badge">ทุนการศึกษา</span></div>
+    <div class="admit-card"><div class="admit-icon">🏫</div><div><div class="admit-name">น้องปลาวาฬ / นัท</div><div class="admit-uni">สอบเข้า ม.1 รร.เทพศิรินทร์ ห้อง IEP</div></div><span class="admit-badge">สอบติด</span></div>
+    <div class="admit-card"><div class="admit-icon">🔭</div><div><div class="admit-name">น้องไข่มุก</div><div class="admit-uni">วิทย์ เคมีวิศวกรรม จุฬาฯ (อันดับ 1)</div></div><span class="admit-badge">สอบติด</span></div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="eyebrow fu">FAQ</div>
+    <h2 class="sec-title fu">คำถามที่พบบ่อย</h2>
+    <p class="sec-sub fu">สงสัยอะไรเพิ่มเติม ติดต่อมาคุยก่อนได้เลย</p>
+    <div class="faq-list fu">
+      <div class="faq-item"><div class="faq-q" onclick="faq(this)">TutorProTH ต่างจากการหาติวเตอร์เองยังไง?<span class="faq-arr">▼</span></div><div class="faq-a"><div class="faq-a-in">เราคัดกรองและจับคู่ติวเตอร์ที่เหมาะกับผู้เรียนแต่ละคนโดยเฉพาะ ประหยัดเวลาในการหาเอง และมีแอดมินช่วยดูแลตลอดกระบวนการ ตั้งแต่จับคู่จนถึงเริ่มเรียน</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="faq(this)">ค่าเรียนรวมอะไรบ้าง?<span class="faq-arr">▼</span></div><div class="faq-a"><div class="faq-a-in">ราคาที่แสดงรวมค่าเอกสารการเรียนของติวเตอร์แล้ว สำหรับการเรียนนอกสถานที่มีค่าใช้จ่ายเริ่มต้น 250 บาท/ชั่วโมง ทัก LINE สอบถามรายละเอียดเพิ่มเติมได้เลย</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="faq(this)">เรียนได้กี่รูปแบบ?<span class="faq-arr">▼</span></div><div class="faq-a"><div class="faq-a-in">มี 3 รูปแบบ ได้แก่ เรียนออนไลน์ผ่าน Zoom / Google Meet, เรียนที่บ้านหรือที่พัก โดยติวเตอร์เดินทางมาหา, และเรียนนอกสถานที่ เช่น ห้าง ร้านกาแฟ ตามที่ผู้เรียนสะดวก</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="faq(this)">ถ้าไม่ถูกใจติวเตอร์ เปลี่ยนได้ไหม?<span class="faq-arr">▼</span></div><div class="faq-a"><div class="faq-a-in">ได้เลยครับ แจ้งแอดมินทาง LINE แล้วเราจะหาติวเตอร์คนใหม่ที่เหมาะกว่าให้</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="faq(this)">สอนภาษาที่ 3 ด้วยไหม? มีเจ้าของภาษาไหม?<span class="faq-arr">▼</span></div><div class="faq-a"><div class="faq-a-in">มีครับ ทั้งจีน ญี่ปุ่น เกาหลี ฝรั่งเศส เยอรมัน และอื่นๆ มีทั้งติวเตอร์ไทยที่เชี่ยวชาญและติวเตอร์เจ้าของภาษา แจ้งความต้องการมาทาง LINE ได้เลย</div></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="faq(this)">เรียนได้กี่ครั้งต่อสัปดาห์? ยืดหยุ่นได้ไหม?<span class="faq-arr">▼</span></div><div class="faq-a"><div class="faq-a-in">ยืดหยุ่นได้ตามต้องการ จะเรียน 1-3 ครั้งต่อสัปดาห์ก็ได้ ขึ้นอยู่กับเป้าหมายและความสะดวกของผู้เรียน</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div><div class="ft-brand">TutorPro<span>TH</span></div><div class="ft-copy">© 2025 TutorProTH · สงวนลิขสิทธิ์</div></div>
-  <a class="ft-line" href="https://line.me/R/ti/p/@455erqfq">💬 ติดต่อหาติวเตอร์กับเราได้เลย</a>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-brand">TutorPro<span>TH</span></div>
+      <div class="ft-tagline">ติวเตอร์คุณภาพ เข้าใจง่าย ได้ผลจริง<br>เรียนที่บ้าน นอกสถานที่ และออนไลน์</div>
+      <a class="ft-line" href="https://line.me/R/ti/p/@455erqfq" onclick="tl('footer')">💬 ติดต่อหาติวเตอร์กับเราได้เลย</a>
+    </div>
+    <div class="ft-col"><h4>วิชาที่สอน</h4><a href="#">คณิตศาสตร์</a><a href="#">ภาษาอังกฤษ</a><a href="#">วิทยาศาสตร์</a><a href="#">ภาษาที่ 3</a><a href="#">มหาวิทยาลัย</a></div>
+    <div class="ft-col"><h4>ระดับชั้น</h4><a href="#">อนุบาล–ประถม</a><a href="#">มัธยมต้น</a><a href="#">มัธยมปลาย</a><a href="#">มหาวิทยาลัย</a><a href="#">คนทำงาน</a></div>
+    <div class="ft-col"><h4>ข้อมูล</h4><a href="#pricing">ค่าเรียน</a><a href="#how">ขั้นตอนสมัคร</a><a href="#reviews">รีวิว</a><a href="#faq">FAQ</a><a href="#">นโยบายความเป็นส่วนตัว</a></div>
+  </div>
+  <div class="ft-bottom">
+    <div class="ft-copy">© 2025 TutorProTH · สงวนลิขสิทธิ์ทุกประการ</div>
+    <div class="ft-social">
+      <a class="soc-ico" href="#" title="Facebook">f</a>
+      <a class="soc-ico" href="#" title="Instagram">ig</a>
+      <a class="soc-ico" href="https://line.me/R/ti/p/@455erqfq" title="LINE">L</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+function ckAccept(){localStorage.setItem('ck','y');document.getElementById('ckb').classList.add('gone');}
+function ckClose(){document.getElementById('ckb').classList.add('gone');}
+if(localStorage.getItem('ck'))document.getElementById('ckb').classList.add('gone');
+function togMob(){document.getElementById('mobNav').classList.toggle('open');}
+function faq(el){const o=el.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open');});if(!o){el.classList.add('open');el.nextElementSibling.classList.add('open');}}
+function switchTab(btn,id){document.querySelectorAll('.curr-tab').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.curr-content').forEach(c=>c.classList.remove('active'));btn.classList.add('active');document.getElementById(id).classList.add('active');}
+function switchPrice(btn,id){document.querySelectorAll('.ptoggle-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.pricing-table').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById(id).classList.add('active');}
+function switchRv(btn,id){document.querySelectorAll('.rv-tab').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.rv-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(id).classList.add('active');}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis');});},{threshold:0.08});
+document.querySelectorAll('.fu').forEach(e=>obs.observe(e));
+
+// TUTOR SLIDER
+(function(){
+  var track = document.getElementById('tutorTrack');
+  var dotsWrap = document.getElementById('sliderDots');
+  if(!track) return;
+  var cards = track.querySelectorAll('.tutor-card');
+  var total = cards.length;
+  var current = 0;
+  var perView = window.innerWidth < 600 ? 1 : window.innerWidth < 900 ? 2 : 3;
+  var maxSlide = Math.max(0, total - perView);
+
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    for(var i=0;i<=maxSlide;i++){
+      var d=document.createElement('div');
+      d.className='slider-dot'+(i===0?' active':'');
+      d.onclick=(function(idx){return function(){goTo(idx);};})(i);
+      dotsWrap.appendChild(d);
+    }
+  }
+  function goTo(idx){
+    current=Math.max(0,Math.min(idx,maxSlide));
+    var cardW=cards[0].offsetWidth+20;
+    track.style.transform='translateX(-'+current*cardW+'px)';
+    dotsWrap.querySelectorAll('.slider-dot').forEach(function(d,i){d.classList.toggle('active',i===current);});
+  }
+  window.slideMove=function(dir){goTo(current+dir);};
+  buildDots();
+  window.addEventListener('resize',function(){
+    perView=window.innerWidth<600?1:window.innerWidth<900?2:3;
+    maxSlide=Math.max(0,total-perView);
+    buildDots();goTo(0);
+  });
+})();
+
+function tl(loc){if(typeof gtag!=='undefined')gtag('event','click_line',{event_label:loc});console.log('[line]',loc);}
+</script>
 </body>
 </html>
